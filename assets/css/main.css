@@ -3374,6 +3374,8 @@ input, select, textarea {
 				#header .logo {
 					font-size: 1.25em;
 					margin: 0;
+					width: 70px;
+					height: 30px;
 				}
 
 				#header .icons {
@@ -3607,3 +3609,25 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+		.card-bg{
+			background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+		}
+		.footer-color{
+			color:#f56a6a;
+		}
+		.iframe-container{
+			position: relative;
+			width: 100%;
+			padding-bottom: 56%;
+			height: 0;
+		}
+		.iframe-container iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
