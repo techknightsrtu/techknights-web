@@ -1,4 +1,3 @@
 # Techknights-Website
 
-* In PHP with MYSQL database.
-* Needs to be edited for using Firebase
+* This is the official website of techknights
