@@ -25,7 +25,7 @@ document.getElementById('button').addEventListener('click',()=>{
 	if(data.value==""){
 		alert('Input not valid');
 		data.focus();
-	}else if(data.value.match(mailFormat)){
+	}else if(!data.value.match(mailFormat)){
         alert('Email address is invalid');
     }
 	else{
