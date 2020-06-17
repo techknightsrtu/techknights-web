@@ -16,12 +16,20 @@ const config = {
   const database=firebase.database();
 const rootRef=database.ref('blogpost/');
 
+document.getElementById('file').addEventListener('change',(e)=>{
+    const name=document.getElementById('name');
+    var file=e.target.files[0];
+    console.log(name);
+    var storageRef=firebase.storage().ref(`images-blog/${name.value}/${file.name}`);
+    storageRef.put(file);
+})
+
 document.getElementById('button').addEventListener('click',()=>{
     const name=document.getElementById('name');
     const email=document.getElementById('email');
     const text=document.getElementById('text');
     const mailFormat= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+
     if(name.value==""){
         alert('Input field is empty!');
 		name.focus();
@@ -39,7 +47,7 @@ document.getElementById('button').addEventListener('click',()=>{
     else{
         const autoID=rootRef.push().key;
         rootRef.child(autoID).set({
-            name:name.value,
+            title:name.value,
             email:email.value,
             text:text.value
 		})
